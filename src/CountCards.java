@@ -51,7 +51,7 @@ public class CountCards {
 	 * 
 	 * @return the probability of busting
 	 */
-	public double probabilityOfBusting() {
+	public double probabilityOfBusting(int currentTotal) {
 		// The amount need to not bust
 		int amountNeeded = 21 - currentTotal;
 		// The total amount of cards left in the deck
@@ -79,7 +79,6 @@ public class CountCards {
 
 	public static void main(String[] args) {
 		CountCards c = new CountCards();
-		c.currentTotal = 12;
-		System.out.println(c.probabilityOfBusting());
+		System.out.println(c.probabilityOfBusting(10));
 	}
 }

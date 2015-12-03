@@ -18,7 +18,7 @@ public class CountCards {
 	 * Resets all of the probabilities, this should be called each time the deck
 	 * is shuffled
 	 */
-	private void reset() {
+	public void reset() {
 		amount = new int[11];
 		for (int i = 0; i < amount.length; i++) {
 			// 24 of each card in 6 decks
@@ -34,7 +34,7 @@ public class CountCards {
 	 * @param card
 	 *            the card that has been played
 	 */
-	public void playedCard(int card) {
+	public void countCard(int card) {
 		// If the card is an Ace it's subtracted from 1 and 11 because it is
 		// counted twice
 		if (card == 11 || card == 1) {
